@@ -21,10 +21,10 @@ export default function UserForm(props) {
         <h2>Add a user</h2>
 
         <div className="errors">
-          <div>{errors.username}</div>
-          <div>{errors.email}</div>
-          <div>{errors.password}</div>
-          <div>{errors.tos}</div>
+          <div id="usernameError">{errors.username}</div>
+          <div id='emailError'>{errors.email}</div>
+          <div id='passwordError'>{errors.password}</div>
+          <div id='tosError'>{errors.tos}</div>
         </div>
       </div>
 
