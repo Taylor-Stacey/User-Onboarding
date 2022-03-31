@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "axois": "^0.0.1-security",
+    "cypress": "^9.5.3",
+    "yup": "^0.32.11"
+  }
+}

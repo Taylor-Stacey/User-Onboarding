@@ -69,7 +69,7 @@ export default function UserForm(props) {
                 onChange={onChange}
             />
         </label>
-        <input type="submit" value="create a friend" disabled={disabled} />
+        <input id='submitBtn' type="submit" value="create a friend" disabled={disabled} />
       </div>
     </form>
   );
