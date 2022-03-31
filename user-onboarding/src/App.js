@@ -19,6 +19,7 @@ const initialFormErrors = {
   username: '',
   email: '',
   password: '',
+  tos: ''
 }
 
 const initialUsers = []
@@ -69,6 +70,7 @@ export default function App() {
   }, [formValues])
 
   return (
+    
     <div className='container'>
       <header><h1>User sign up</h1></header>
       

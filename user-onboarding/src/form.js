@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function UserForm(props) {
   const { values, submit, change, disabled, errors } = props;
+  const { username, email, password, tos } = props.values;
 
   const onSubmit = (evt) => {
     evt.preventDefault();
@@ -19,22 +20,21 @@ export default function UserForm(props) {
       <div className="form-group submit">
         <h2>Add a user</h2>
 
-        <button disabled={disabled}>submit</button>
-
         <div className="errors">
           <div>{errors.username}</div>
           <div>{errors.email}</div>
           <div>{errors.password}</div>
+          <div>{errors.tos}</div>
         </div>
       </div>
 
       <div className="form-group inputs">
-        <h4>General information</h4>
+        <h4>General User Information</h4>
 
         <label>
           Username&nbsp;
           <input
-            value={values.username}
+            value={username}
             onChange={onChange}
             name="username"
             type="text"
@@ -44,7 +44,7 @@ export default function UserForm(props) {
         <label>
           Email
           <input
-            value={values.email}
+            value={email}
             onChange={onChange}
             name="email"
             type="text"
@@ -54,23 +54,23 @@ export default function UserForm(props) {
         <label>
           password
           <input
-            value={values.password}
+            value={password}
             onChange={onChange}
             name="password"
             type="password"
           />
         </label>
 
-        <label>
-          Terms Of Service
-          <input
-            type="checkbox"
-            name="Terms Of Service"
-            onChange={onChange}
-            checked={values.tos}
-          />
+        <label>Terms of Service:
+            <input
+                type="checkbox"
+                name="tos"
+                checked={tos}
+                onChange={onChange}
+            />
         </label>
+        <input type="submit" value="create a friend" disabled={disabled} />
       </div>
     </form>
-  )
+  );
 }
